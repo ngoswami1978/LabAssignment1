@@ -6,7 +6,7 @@ namespace LabAssignment1.Models
 {
     public class SignUpViewModel
     {
-
+        #region Region Methods
         public SignUpViewModel()// Assign data using constructor
         {
             Countries = getCountryList();
@@ -82,8 +82,10 @@ namespace LabAssignment1.Models
             }
             return cityList;
         }
+        #endregion
 
-
+        #region Region Required variables
+        
         [Required(ErrorMessage="Please Enter Name")]  
         public string Name { get; set; }
 
@@ -119,6 +121,7 @@ namespace LabAssignment1.Models
 
         [ValidateCheckBox(ErrorMessage="Please Accept Terma")]
         public bool AcceptTerms { get; set; }
+        #endregion
 
     }
 }
